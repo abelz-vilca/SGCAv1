@@ -14,8 +14,15 @@
 Route::get('/', function () {
     return view('layouts.plantilla');
 });
+Route::get('/inicio', function () {
+    return view('welcome');
+});
 
 Route::get('/acreditacion', function () {
     return view('acreditacion');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
