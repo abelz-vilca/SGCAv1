@@ -192,7 +192,7 @@
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">INICIO</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('inicio')}}">HOME</a></li>
                         <!-- <li class="breadcrumb-item">pages</li>
                         <li class="breadcrumb-item active">Animation</li> -->
                     </ol>
@@ -209,7 +209,7 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
 
-                                                             
+                          <h1>hola mumdo</h1>                                   
                 
                                 @yield('name')
                          
