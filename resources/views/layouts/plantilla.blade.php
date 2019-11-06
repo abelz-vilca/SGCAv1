@@ -47,14 +47,16 @@
                             <!-- Dark Logo icon -->
                             <img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="{{asset('assets/images/logo-light-icon.png')}}" alt="homepage" class="light-logo" />
+                            <img src="{{asset('assets/images/logo-light-icon.png')}}" alt="homepage"
+                                class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                             <!-- dark Logo text -->
                             <img src="{{asset('assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
                             <!-- Light Logo text -->
-                            <img src="{{asset('assets/images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span>
+                            <img src="{{asset('assets/images/logo-light-text.png')}}" class="light-logo"
+                                alt="homepage" /></span>
                     </a>
                 </div>
                 <!-- ============================================================== -->
@@ -134,7 +136,7 @@
                         <!-- <a href="app-email.html" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a> -->
                         <a href="pages-login.html" class="" data-toggle="tooltip" title="Logout"><i
                                 class="mdi mdi-power"></i></a>
-                       
+
                     </div>
                 </div>
                 <!-- End User profile text-->
@@ -147,14 +149,15 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
                                     class="icon icon-grid"></i><span class="hide-menu">menu</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="acreditacion">Acreditación</a></li>
-                                <li><a href="programas">Licenciamiento</a></li>
+                                <li><a href="{{route('acreditacion')}}">Acreditación</a></li>
+                                <li><a href="{{route('programa')}}">Licenciamiento</a></li>
                                 <li><a href="page3-sgc.html">SGC</a></li>
                                 <!-- submenu-->
                                 <li> <a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
                                         <i class=" icon-chart"></i><span class="hide-menu"> REPORTES</span></a>
                                     <ul aria-expanded="false" class="collapse">
-                                        <li><a class="icon-crop" href=""> Dimencion</a></li>
+                                        <li><a class="icon-crop" href="{{route('reporte')}}">PROGRAMAS</a></li>
+                                        <li><a class="icon-crop" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
                                         <li><a class="icon-graph" href=""> Estandares</a></li>
                                     </ul>
@@ -239,7 +242,7 @@
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{asset('assets/plugins/bootstrap/js/popper.min.js')}}"></script>
     >
-<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
     <script src="{{asset('js/jquery.slimscroll.js')}}"></script>
     <!--Wave Effects -->
@@ -247,10 +250,10 @@
     <!--Menu sidebar -->
     <script src="{{asset('js/sidebarmenu.js')}}"></script>
     <!--stickey kit -->
-<script src="{{asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
-<script src="{{asset('assets/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
     <!--Custom JavaScript -->
-<script src="{{asset('js/custom.min.js')}}"></script>
+    <script src="{{asset('js/custom.min.js')}}"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->

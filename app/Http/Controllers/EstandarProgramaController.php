@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use DB;
 use carbon\Carbon;
 use Illuminate\Http\Request;
-use App\Programa;
-use App\EstandarPragrama;
+use App\Estandar;
 use App;
 
-class ProgramaController extends Controller
+class EstandarProgramaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -28,10 +28,15 @@ class ProgramaController extends Controller
      */
     public function create()
     {
-        $programas = App\Programa::all();
-        return view('programas', compact('programas'));
+        //
     }
-
+    public function devolverprograma($programa_id)
+    {
+        // $devolverisprograma = App\EstandarPrograma::findOrFail($programa_id);
+        $devolverisprograma = App\EstandarPrograma::where('programa_id', $programa_id)->get();
+        $estandarprograma = App\EstandarPrograma::where('programa_id', 1)->get();
+        return view('estandar_programa', compact('devolverisprograma', 'estandarprograma'));
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -66,16 +71,9 @@ class ProgramaController extends Controller
     }
     public function editar($id)
     {
-        $programas = App\Programa::findOrFail($id);
-        $estandarprograma = App\EstandarPrograma::where('programa_id', $id)->get();
-        return view('programasdetalle', compact('programas', 'estandarprograma'));
-    }
-    public function editare($id)
-    {
-        // $estandarprograma = App\EstandarPrograma::where('programa_id', 1)->get();
-        $programas = App\Programa::findOrFail($id);
-        $estandarprograma = App\EstandarPrograma::where('programa_id', $id)->get();
-        return view('listardetalle', compact('programas', 'estandarprograma'));
+        $devolverisprograma = App\EstandarPrograma::findOrFail($id);
+
+        return view('programas.editar', compact('devolverisprograma'));
     }
 
     /**
@@ -89,7 +87,22 @@ class ProgramaController extends Controller
     {
         //
     }
+    public function updates(Request $request, $id)
 
+    {
+
+        $request->validate([
+            'link' => 'required',
+            'calificacion' => 'required'
+        ]);
+        $notaupdate = App\EstandarPrograma::findOrFail($id);
+        $notaupdate->link = $request->link;
+        $notaupdate->calificacion = $request->calificacion;
+        $notaupdate->fecha = Carbon::now();
+
+        $notaupdate->save();
+        return back()->with('mensaje', 'Calificacion actualizada');
+    }
     /**
      * Remove the specified resource from storage.
      *

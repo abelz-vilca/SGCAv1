@@ -11,6 +11,7 @@
 |
 */
 Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
+Route::get('/reportetotal', 'PagesController@reporte')->name('reporte');
 
 Route::get('/', function () {
     return view('layouts.plantilla');
@@ -19,14 +20,28 @@ Route::get('/inicio', function () {
     return view('welcome');
 });
 // ************************************************************************************
-                // OTROS RUTAS DEL SISTEMA
+// OTROS RUTAS DEL SISTEMA
 // ************************************************************************************
 
 Route::get('/programas', 'ProgramaController@create')->name('programa');
 
 Route::get('/programas/{id}', ['as' => 'programadetalle', 'uses' => 'ProgramaController@editar']);
 
+//PARA EDITAR PROGRAMA DE ESTUDIOS
+Route::get('estandar_programa', ['as' => 'estandar_programa.create', 'uses' => 'EstandarProgramaController@create']);
+Route::get('/editar/{id}', ['as' => 'programas.editar', 'uses' => 'EstandarProgramaController@editar']);
 
+Route::put('/editar/{id}', ['as' => 'estandar_programa.update', 'uses' => 'EstandarProgramaController@updates']);
+Route::get('estandar_programa/{programa_id}', ['as' => 'estandar_programaid', 'uses' => 'EstandarProgramaController@devolverprograma']);
+
+//link para mandar a su calificacion
+Route::get('/programass/{id}', ['as' => 'listardetalles', 'uses' => 'ProgramaController@editare']);
+
+//////****************************************************** */ruta pa suma
+
+Route::get('/suma',  'PagesController@sumas');
+
+Route::get('/sumas/{id}', ['as' => 'sumacalificacion', 'uses' => 'PagesController@sumas']);
 // *******************************************************************************************************
 // *******************************************************************************************************
 
