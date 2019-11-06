@@ -9,14 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/images/favicon.png')}}">
     <title>OGCA</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="{{asset('css/colors/blue.css')}}" id="theme" rel="stylesheet">
 
 </head>
 
@@ -45,16 +45,16 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="{{asset('assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="{{asset('assets/images/logo-light-icon.png')}}" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                             <!-- dark Logo text -->
-                            <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                            <img src="{{asset('assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
                             <!-- Light Logo text -->
-                            <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span>
+                            <img src="{{asset('assets/images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span>
                     </a>
                 </div>
                 <!-- ============================================================== -->
@@ -83,7 +83,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                    src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                                    src="{{asset('assets/images/users/1.jpg')}}" alt="user" class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right scale-up">
                                 <ul class="dropdown-user">
                                     <li>
@@ -123,7 +123,7 @@
                 <!-- User profile -->
                 <div class="user-profile">
                     <!-- User profile image -->
-                    <div class="profile-img"> <img src="../assets/images/users/profile.png" alt="user" />
+                    <div class="profile-img"> <img src="{{asset('assets/images/users/profile.png')}}" alt="user" />
                         <!-- this is blinking heartbit-->
                         <div class="notify setpos"> <span class="heartbit"></span> <span class="point"></span> </div>
                     </div>
@@ -134,24 +134,7 @@
                         <!-- <a href="app-email.html" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a> -->
                         <a href="pages-login.html" class="" data-toggle="tooltip" title="Logout"><i
                                 class="mdi mdi-power"></i></a>
-                        <div class="dropdown-menu animated flipInY">
-                            <!-- text-->
-                            <a href="#" class="dropdown-item"><i class="ti-user"></i> Mi Perfil</a>
-                            <!-- text-->
-                            <a href="#" class="dropdown-item"><i class="ti-wallet"></i> Mi Balance</a>
-                            <!-- text-->
-                            <a href="#" class="dropdown-item"><i class="ti-email"></i> Bandeja de Entrada</a>
-                            <!-- text-->
-                            <div class="dropdown-divider"></div>
-                            <!-- text-->
-                            <a href="#" class="dropdown-item"><i class="ti-settings"></i> Configuración de cuenta</a>
-                            <!-- text-->
-                            <div class="dropdown-divider"></div>
-                            <!-- text-->
-                            <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i>
-                                Cerrar sesión</a>
-                            <!-- text-->
-                        </div>
+                       
                     </div>
                 </div>
                 <!-- End User profile text-->
@@ -165,7 +148,7 @@
                                     class="icon icon-grid"></i><span class="hide-menu">menu</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="acreditacion">Acreditación</a></li>
-                                <li><a href="page2-licenciamiento.html">Licenciamiento</a></li>
+                                <li><a href="programas">Licenciamiento</a></li>
                                 <li><a href="page3-sgc.html">SGC</a></li>
                                 <!-- submenu-->
                                 <li> <a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
@@ -201,7 +184,7 @@
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">INICIO</a></li>
+                        <li class="breadcrumb-item"><a href="/">INICIO</a></li>
                         <!-- <li class="breadcrumb-item">pages</li>
                         <li class="breadcrumb-item active">Animation</li> -->
                     </ol>
@@ -252,26 +235,26 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="../assets/plugins/bootstrap/js/popper.min.html"></script>
-
-    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets/plugins/bootstrap/js/popper.min.js')}}"></script>
+    >
+<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
+    <script src="{{asset('js/jquery.slimscroll.js')}}"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="{{asset('js/waves.js')}}"></script>
     <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
+    <script src="{{asset('js/sidebarmenu.js')}}"></script>
     <!--stickey kit -->
-    <script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="{{asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
+<script src="{{asset('assets/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
     <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
+<script src="{{asset('js/custom.min.js')}}"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
-    <script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="{{asset('assets/plugins/styleswitcher/jQuery.style.switcher.js')}}"></script>
 </body>
 
 

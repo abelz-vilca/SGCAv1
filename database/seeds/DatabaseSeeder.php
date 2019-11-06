@@ -1,5 +1,13 @@
 <?php
 
+use App\Dimension;
+use App\Factor;
+use App\Estandar;
+use App\Region;
+use App\Facultad;
+use App\Academico;
+use App\Programa;
+use App\Especialidad;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,6 +19,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // $this->call(UsersTableSeeder::class);
+        /* $this->call(DimensionesTableSeeder::class);
+        $this->call(FactoresTableSeeder::class);
+        $this->call(EstandaresTableSeeder::class);
+        $this->call(RegionesTableSeeder::class);*/
         $this->call([
             DimensionesTableSeeder::class,
             FactoresTableSeeder::class,
@@ -21,8 +34,10 @@ class DatabaseSeeder extends Seeder
             AcademicosTableSeeder::class,
             ProgramasTableSeeder::class,
             EspecialidadesTableSeeder::class,
-            UsersTableSeeder::class,
-            Estandar_programaTableSeeder::class
+            // UsersTableSeeder::class,
+            Estandar_programaTableSeeder::class,
+            UsuariosTableSeeder::class,
+            // Estandares_ProgramasTableSeeder::class
             //DocentesTableSeeder::class,
         ]);
     }

@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
 
 Route::get('/', function () {
     return view('layouts.plantilla');
@@ -17,10 +18,20 @@ Route::get('/', function () {
 Route::get('/inicio', function () {
     return view('welcome');
 });
+// ************************************************************************************
+                // OTROS RUTAS DEL SISTEMA
+// ************************************************************************************
 
-Route::get('/acreditacion', function () {
-    return view('acreditacion');
-});
+Route::get('/programas', 'ProgramaController@create')->name('programa');
+
+Route::get('/programas/{id}', ['as' => 'programadetalle', 'uses' => 'ProgramaController@editar']);
+
+
+// *******************************************************************************************************
+// *******************************************************************************************************
+
+
+
 
 
 Auth::routes();
