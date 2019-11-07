@@ -27,6 +27,10 @@ Route::get('/programas', 'ProgramaController@create')->name('programa');
 
 Route::get('/programas/{id}', ['as' => 'programadetalle', 'uses' => 'ProgramaController@editar']);
 
+
+//mostrar lista de progrmas
+Route::get('/listarprogramas', 'ProgramaController@creates');
+
 //PARA EDITAR PROGRAMA DE ESTUDIOS
 Route::get('estandar_programa', ['as' => 'estandar_programa.create', 'uses' => 'EstandarProgramaController@create']);
 Route::get('/editar/{id}', ['as' => 'programas.editar', 'uses' => 'EstandarProgramaController@editar']);
@@ -45,7 +49,7 @@ Route::get('/sumas/{id}', ['as' => 'sumacalificacion', 'uses' => 'PagesControlle
 // *******************************************************************************************************
 // *******************************************************************************************************
 
-
+Route::get('reporte', 'PagesController@reportes')->name('reportes');
 
 
 

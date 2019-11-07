@@ -2,6 +2,7 @@
 
 @section('name')
 
+
 <div class="container-fluid" class="container-my-4">
     <form>
         <div class="form-group">
@@ -66,6 +67,4 @@
 
 </div>
 
-
-@include('modal')
-@endsection
+@endsection()

@@ -31,7 +31,11 @@ class ProgramaController extends Controller
         $programas = App\Programa::all();
         return view('programas', compact('programas'));
     }
-
+    public function creates()
+    {
+        $programas = App\Programa::all();
+        return view('reportes.reporteprogramas', compact('programas'));
+    }
     /**
      * Store a newly created resource in storage.
      *
