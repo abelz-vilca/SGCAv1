@@ -32,9 +32,7 @@ $programa30; $programa31; $programa32; $programa33;
           'INGENIERÍA DE SISTEMAS','CIENCIAS FÍSICO MATEMÁTICAS-Estadistica','CIENCIAS FÍSICO MATEMÁTICAS-Matemática',
           'CIENCIAS FÍSICO MATEMÁTICAS-Física','INGENIERÍA QUÍMICA','INGENIERÍA EN INDUSTRIAS ALIMENTARIAS',
           'INGENIERÍA AGROINDUSTRIAL','MEDICINA HUMANA','FARMACIA Y BIOQUÍMICA','OBSTETRICIA','ENFERMERÍA'
-
-        
-        
+               
         ],
 
           ['2019', 
