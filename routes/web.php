@@ -46,6 +46,13 @@ Route::get('/programass/{id}', ['as' => 'listardetalles', 'uses' => 'ProgramaCon
 Route::get('/suma',  'PagesController@sumas');
 
 Route::get('/sumas/{id}', ['as' => 'sumacalificacion', 'uses' => 'PagesController@sumas']);
+Route::get('/factor/{id}', ['as' => 'graficofactor', 'uses' => 'PagesController@factor']);
+Route::get('/dimension/{id}', ['as' => 'graficodimension', 'uses' => 'PagesController@dimension']);
+Route::get('/ed/{id}', ['as' => 'graficocaed', 'uses' => 'PagesController@ed']);
+
+Route::get('/estandartotal', ['as' => 'estandartotal', 'uses' => 'PagesController@estandadarestotal']);
+
+Route::get('/totalestandares', ['as' => 'totalestandar', 'uses' => 'PagesController@totalestandares']);
 // *******************************************************************************************************
 // *******************************************************************************************************
 

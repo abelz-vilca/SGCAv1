@@ -60,7 +60,7 @@ class ProgramasTableSeeder extends Seeder
                 'facultad_id' => '3'
             ],
 
-//Especilidades de EDUCACACION SECUNDARIA
+            //Especilidades de EDUCACACION SECUNDARIA
 
             [
                 'nombre_programa' => 'EDUCACIÓN SECUNDARIA-Ingles y Lengua Española',
@@ -75,21 +75,21 @@ class ProgramasTableSeeder extends Seeder
                 'academico_id' => '1',
                 'facultad_id' => '3'
             ],
-            
+
             [
                 'nombre_programa' => 'EDUCACIÓN SECUNDARIA-Ciencias Sociales y Filosofia con mencion en Turismo',
                 'CUI' => '170800485',
                 'academico_id' => '1',
                 'facultad_id' => '3'
             ],
-            
+
             [
                 'nombre_programa' => 'EDUCACIÓN SECUNDARIA-Lengua Española y Literatura con mencion en comunicación',
                 'CUI' => '170800484',
                 'academico_id' => '1',
                 'facultad_id' => '3'
             ],
-//FIIN DE ESPECILAIDADES DE SECUNDARIA
+            //FIIN DE ESPECILAIDADES DE SECUNDARIA
 
             [
                 'nombre_programa' => 'EDUCACIÓN FÍSICA',
@@ -193,7 +193,7 @@ class ProgramasTableSeeder extends Seeder
                 'academico_id' => '1',
                 'facultad_id' => '7'
             ],
-// FIN DE ESPECILIDAD DE MATEMATICA
+            // FIN DE ESPECILIDAD DE MATEMATICA
 
             [
                 'nombre_programa' => 'INGENIERÍA QUÍMICA',

@@ -159,7 +159,7 @@
                                         <li><a class="icon-crop" href="{{route('reporte')}}">PROGRAMAS</a></li>
                                         <li><a class="icon-crop" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
-                                        <li><a class="icon-graph" href=""> Estandares</a></li>
+                                        <li><a class="icon-graph" href="{{route('estandartotal')}}"> Estandares</a></li>
                                     </ul>
                                 </li>
 
@@ -247,6 +247,7 @@
     <script src="{{asset('js/jquery.slimscroll.js')}}"></script>
     <!--Wave Effects -->
     <script src="{{asset('js/waves.js')}}"></script>
+    <script src="{{asset('js/jsapi.js')}}"></script>
     <!--Menu sidebar -->
     <script src="{{asset('js/sidebarmenu.js')}}"></script>
     <!--stickey kit -->
