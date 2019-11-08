@@ -12,11 +12,16 @@
 */
 Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
 Route::get('/reportetotal', 'PagesController@reporte')->name('reporte');
+route::get('/errors','ProgramaController@error')->name('errors');
 
-Route::get('/', function () {
+Route::get('', function () {
+    return view('');
+});
+
+Route::get('/inicio', function () {
     return view('layouts.plantilla');
 });
-Route::get('/inicio', function () {
+Route::get('', function () {
     return view('welcome');
 });
 // ************************************************************************************

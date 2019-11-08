@@ -50,7 +50,7 @@ $factor10;
 
 <div>
   <h4>Programa de estudios</h4>
-  <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas}}">
-  </p>
+  <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->nombre_programa}}">
+    </p>
 </div>
 @endsection

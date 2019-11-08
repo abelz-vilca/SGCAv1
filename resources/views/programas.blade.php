@@ -1,12 +1,11 @@
 @extends('layouts.plantilla')
 
 @section('name')
-<div align="center" class="container-my-4">
+<div  align="center">
 
-
-    <a type="button" class="btn btn-success">SELECCIONE SU PROGRAMA DE ESTUDIOS</a>
-
-</div>
+        <h1>SELECCIONE SU PROGRAMA DE ESTUDIOS</h1>
+        
+    </div>
 <div class="container-fluid" class="container-my-4">
     <table class="table table-bordered table-info" align="center">
         <thead class="table table-striped">
@@ -27,7 +26,7 @@
                 <td>{{$item->CUI}}</td>
 
                 <td>
-                    <a href="{{route('programadetalle', $item)}}" type="button" class="btn btn-primary">DUCUMENTAR</a>
+                    <a href="{{route('programadetalle', $item)}}" type="button" class="btn btn-danger">DUCUMENTAR</a>
                     {{-- <a href="{{route('programas', $item)}}" ype="button" class="btn btn-primary">DUCUMENTAR</a>
                     --}}
                 </td>

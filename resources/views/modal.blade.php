@@ -18,7 +18,7 @@
             alt=""> --}}
 
 
-                <img src="/plantilla/images/gallery/evaluacion.jpg" width="800" height="500"
+                <img src="{{asset('imagenes/evaluacion.png')}}" width="800" height="500"
                     class="img-responsive center-block" />
             </div>
             {{-- <div class="modal-footer">

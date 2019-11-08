@@ -26,6 +26,12 @@ class ProgramaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+public function error(){
+
+    return view('error');
+}
+    
     public function create()
     {
         $programas = App\Programa::all();

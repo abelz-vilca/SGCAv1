@@ -10,14 +10,7 @@
 <header>
 
     <!-- Image and text -->
-    <nav class="navbar navbar-black bg-info">
-        <a class="navbar-brand" href="{{route('estandar_programa.create')}}">
-            <img src="/plantilla/images/avatars/avatar.png" width="30" height="30" class="d-inline-block align-top"
-                alt="">
-            a casa XD
-        </a>
-
-    </nav>
+    
 </header>
 <div class="row">
     <div class="col-12">
@@ -38,7 +31,7 @@
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"
-                                                id="basic-addon3">https://archivo01.com</span>
+                                                id="basic-addon3">url:</span>
                                         </div>
                                         {{-- <input type="text" name="link" class="form-control" value="{{old('link')}}">
                                         --}}
@@ -68,7 +61,7 @@
 
                                         </select>
                                     </div>
-                                    {{-- xdxdxd1 --}}
+                                    
                                 </div>
                                 <div class="form-group col-md-12">
 
@@ -107,15 +100,13 @@
     </div>
 </div>
 
-<div class="p-3 mb-2 bg-warning text-dark">
+<div align="center" >
 
     {{-- {{route('estandar_programaid')}} --}}
     {{-- {{route('estandar_programaid',$devolverisprograma->programa_id)}} --}}
-    <a class="navbar-brand" href="{{route('estandar_programaid',$devolverisprograma->programa_id)}}">
-        <img src="/plantilla/images/avatars/avatar.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        a casa XD
+    <a  align="center" class="navbar-brand" href="{{route('estandar_programaid',$devolverisprograma->programa_id)}}">
+        <img src="{{asset('imagenes/regresar.png')}}" width="50" height="50" class="d-inline-block align-top" alt="">
+        REGRESAR A VERIFICAR EL DOCUMENTO Y CALIFICACION
     </a>
-
-
 </div>
 @endsection

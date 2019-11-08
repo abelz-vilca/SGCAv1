@@ -14,11 +14,11 @@
                     <p><input disabled="disabled" class="form-control" type="text" name="fecha"
                             value="{{$programas->nombre_programa}}"></p>
                 </div>
-                <div class="col-sm-4">
+                {{-- <div class="col-sm-4">
                     <h4 class="fas fa-align-right">id</h4>
                     <p><input disabled="disabled" class="form-control" type="text" name="fecha"
                             value="{{$programas->id}}"></p>
-                </div>
+                </div> --}}
                 <div class="col-sm-4">
                     <h4>Código Unico de Identificacion</h4>
                     <p><input disabled="disabled" class="form-control" type="text" name="fecha"
@@ -29,13 +29,13 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <table id="example" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
+                    <table class="table table-bordered table-info" align="center">
+                        <thead class="table table-striped">
                             <tr>
                                 <th>#id</th>
-                                <th>calificacion</th>
-                                <th>FECHA</th>
-                                <th>Acciones</th>
+                                <th>Calificacion</th>
+                                <th>Fecha</th>
+                                {{-- <th>Acciones</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -44,17 +44,17 @@
                                 <th scope="row">{{$item->id}}</th>
                                 <td>{{$item->calificacion}}</td>
                                 <td>{{$item->fecha}}</td>
-                                <td>
+                                {{-- <td>
                                     <a disabled="disabled" href="" type="button" class="btn btn-info">Información</a>
-                                    {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
-                                </td>
+                                    </td> --}}
+                                
                             </tr>
                             @endforeach()
                         </tbody>
                     </table>
                 </div>
                 <div class="col">
-                    <div class="col-sm-10">
+                    <div class="p-3 mb-2 bg-warning text-dark" class="col-sm-10">
                         <h4>Programa de estudios</h4>
                         <p><input disabled="disabled" class="form-control" type="text" name="fecha"
                                 value="{{$programas->nombre_programa}}"></p>

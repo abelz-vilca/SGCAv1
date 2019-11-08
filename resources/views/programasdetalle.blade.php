@@ -2,36 +2,36 @@
 
 @section('name')
 
-<div>
+<div  align="center">
 
-    <h1>Página de Programas</h1>
-    <p>PROGRAMAS</p>
+    <h1>CALIFICACION DE ESTANDARES</h1>
+    
 </div>
 
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
             <h4>PROGRAMA SELECCIONADO</h4>
-            <p><input class="form-control" type="text" name="fecha" value="{{$programas->nombre_programa}}"></p>
+            <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->nombre_programa}}"></p>
         </div>
-        <div class="col-sm-4">
+        {{-- <div class="col-sm-4">
             <h4 class="fas fa-align-right">ID</h4>
             <p><input class="form-control" type="text" name="fecha" value="{{$programas->id}}"></p>
-        </div>
+        </div> --}}
         <div class="col-sm-4">
             <h4>Código Unico de Identificacion</h4>
-            <p><input class="form-control" type="text" name="fecha" value="{{$programas->CUI}}"></p>
+            <p><input  disabled="disabled"  class="form-control" type="text" name="fecha" value="{{$programas->CUI}}"></p>
         </div>
     </div>
-    <table class="table table-hover">
-        <thead>
-            <tr align="center">
+    <table class="table table-bordered table-info" align="center">
+        <thead class="table table-striped">
+            <tr class="bg-success" align="center">
                 <th>#ID</th>
                 <th>Link del Archivo</th>
-                <th>calificación</th>
+                <th>Calificación</th>
                 <th>Fecha de Modificación</th>
-                <th>E</th>
-                <th>P</th>
+                <th>Estandar</th>
+                {{-- <th>P</th> --}}
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -41,19 +41,16 @@
             <tr>
                 <th scope="row">{{$item->id}}</th>
                 <td>{{$item->link}}</td>
-                <td>{{$item->calificacion}}</td>
-                <td>{{$item->fecha}}</td>
-                <td>{{$item->estandar_id}}</td>
-                <td>{{$item->programa_id}}</td>
+                <td  align="center">{{$item->calificacion}}</td>
+                <td  align="center">{{$item->fecha}}</td>
+                <td  align="center">{{$item->estandar_id}}</td>
+                {{-- <td>{{$item->programa_id}}</td> --}}
                 <td>
-                    <a href="" class="btn btn-warning pull-right" data-toggle="modal" data-target="#create">EDITAR</a>
+                        <a href="{{route('programas.editar', $item)}}" type="button" class="btn btn-primary">Calificar Estandar</a>
+                    <a href="" class="btn btn-warning pull-right" data-toggle="modal" data-target="#create">Ver</a>
                     {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
                 </td>
-                <td>
-                    <a href="{{route('programas.editar', $item)}}" type="button" class="btn btn-primary">CALIFICAR
-                        E</a>
-                    {{-- <button type="button" class="btn btn-warning">CALIFICAR</button></td> --}}
-                </td>
+               
 
             </tr>
 

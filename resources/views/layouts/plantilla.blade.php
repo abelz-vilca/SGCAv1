@@ -134,7 +134,7 @@
                         <h5>Oficina Calidad</h5>
                         <!-- <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a> -->
                         <!-- <a href="app-email.html" class="" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a> -->
-                        <a href="pages-login.html" class="" data-toggle="tooltip" title="Logout"><i
+                        <a href="{{route('login')}}" class="" data-toggle="tooltip" title="Logout"><i
                                 class="mdi mdi-power"></i></a>
 
                     </div>
@@ -148,10 +148,10 @@
 
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
                                     class="icon icon-grid"></i><span class="hide-menu">menu</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{route('acreditacion')}}">Acreditación</a></li>
-                                <li><a href="{{route('programa')}}">Licenciamiento</a></li>
-                                <li><a href="page3-sgc.html">SGC</a></li>
+                            <ul   aria-expanded="false" class="collapse">
+                                <li  ><a href="{{route('acreditacion')}}">Acreditación</a></li>
+                                <li ><a href="{{asset('errors')}}">Licenciamiento</a></li>
+                                <li><a href="{{asset('errors')}}">SGC</a></li>
                                 <!-- submenu-->
                                 <li> <a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">
                                         <i class=" icon-chart"></i><span class="hide-menu"> REPORTES</span></a>
@@ -187,7 +187,7 @@
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">INICIO</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('login')}}">INICIO</a></li>
                         <!-- <li class="breadcrumb-item">pages</li>
                         <li class="breadcrumb-item active">Animation</li> -->
                     </ol>
@@ -206,8 +206,11 @@
 
 
 
-                @yield('name')
-
+                <main>
+                    <div class="m-2">
+                        @yield('name')
+                    </div>
+                </main>
 
 
 
