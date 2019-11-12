@@ -5414,7 +5414,7 @@ a.mytooltip {
     padding: 0.5em 1em!important
 }
 .left-sidebar {
-    position: absolute;
+    position: fixed;  /*cammmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmbiiiiiiiiiiiiiiiiiiiiiiooooooooooooooooooooooooo*/
     width: 240px;
     height: 100%;
     top: 0px;

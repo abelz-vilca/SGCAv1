@@ -12,7 +12,7 @@
 */
 Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
 Route::get('/reportetotal', 'PagesController@reporte')->name('reporte');
-route::get('/errors','ProgramaController@error')->name('errors');
+route::get('/errors', 'ProgramaController@error')->name('errors');
 
 Route::get('', function () {
     return view('');
@@ -29,6 +29,7 @@ Route::get('', function () {
 // ************************************************************************************
 
 Route::get('/programas', 'ProgramaController@create')->name('programa');
+Route::get('/actualizardatos', 'PagesController@datos')->name('actualizardatos');
 
 Route::get('/programas/{id}', ['as' => 'programadetalle', 'uses' => 'ProgramaController@editar']);
 

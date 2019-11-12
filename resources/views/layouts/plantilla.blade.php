@@ -41,7 +41,8 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="page.html">
+                    <a class="navbar-brand" href="{{route('login')}}">
+                        <!-- PARA IR AL INICIO -->
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
@@ -53,7 +54,8 @@
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                             <!-- dark Logo text -->
-                            <img src="{{asset('assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
+                            <img src="{{asset('assets/images/logo-light-text.png')}}" alt="homepage"
+                                class="dark-logo" />
                             <!-- Light Logo text -->
                             <img src="{{asset('assets/images/logo-light-text.png')}}" class="light-logo"
                                 alt="homepage" /></span>
@@ -82,18 +84,21 @@
                         <!-- ============================================================== -->
                         <!-- Profile -->
                         <!-- ============================================================== -->
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                    src="{{asset('assets/images/users/1.jpg')}}" alt="user" class="profile-pic" /></a>
+                                    src="{{asset('assets/images/users/profile.png')}}" alt="user"
+                                    class="profile-pic" /></a>
                             <div class="dropdown-menu dropdown-menu-right scale-up">
                                 <ul class="dropdown-user">
                                     <li>
                                         <div class="dw-user-box">
-                                            <div class="u-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                            <div class="u-img"><img src="../assets/images/users/profile.png" alt="user">
+                                            </div>
                                             <div class="u-text">
                                                 <h4>Perfil 01</h4>
-                                                <p class="text-muted">vilcabl@gmail.com</p><a href="pages-profile.html"
+                                                <p class="text-muted">vilcabl@gmail.com</p><a href=""
                                                     class="btn btn-rounded btn-danger btn-sm">Ver Perfil</a>
                                             </div>
                                         </div>
@@ -109,6 +114,7 @@
                                 </ul>
                             </div>
                         </li>
+
                     </ul>
                 </div>
             </nav>
@@ -148,9 +154,9 @@
 
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i
                                     class="icon icon-grid"></i><span class="hide-menu">menu</span></a>
-                            <ul   aria-expanded="false" class="collapse">
-                                <li  ><a href="{{route('acreditacion')}}">Acreditación</a></li>
-                                <li ><a href="{{asset('errors')}}">Licenciamiento</a></li>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="{{route('acreditacion')}}">Acreditación</a></li>
+                                <li><a href="{{asset('errors')}}">Licenciamiento</a></li>
                                 <li><a href="{{asset('errors')}}">SGC</a></li>
                                 <!-- submenu-->
                                 <li> <a class="has-arrow waves-effect waves-green" href="#" aria-expanded="false">

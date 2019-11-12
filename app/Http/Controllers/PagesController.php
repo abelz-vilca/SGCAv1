@@ -15,6 +15,10 @@ class PagesController extends Controller
     {
         return view('acreditacion');
     }
+    public function datos()
+    {
+        return view('actualizardatos');
+    }
 
     public function reporte()
     {

@@ -1,11 +1,11 @@
 @extends('layouts.plantilla')
 
 @section('name')
-<div  align="center">
+<div align="center">
 
-        <h1>SELECCIONE SU PROGRAMA DE ESTUDIOS</h1>
-        
-    </div>
+    <h4>SELECCIONE SU PROGRAMA DE ESTUDIOS</h4>
+
+</div>
 <div class="container-fluid" class="container-my-4">
     <table class="table table-bordered table-info" align="center">
         <thead class="table table-striped">
@@ -36,6 +36,6 @@
         </tbody>
 
     </table>
-
+    {{ $programas->links() }}
 </div>
 @endsection

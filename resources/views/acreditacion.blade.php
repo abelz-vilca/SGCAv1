@@ -13,7 +13,7 @@
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">INSTITUCIÓN</label>
                                     <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
-                                     placeholder="UNIVERSIDAD NACIONAL DE SAN CRISTOBAL DE HUAMANGA">
+                                        placeholder="UNIVERSIDAD NACIONAL DE SAN CRISTOBAL DE HUAMANGA">
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">OFICINA</label>
@@ -22,8 +22,8 @@
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">FECHA</label>
-                                    <input  disabled="disabled" type="email" class="form-control" id="inputEmail4" 
-                                    value="<?php echo date("d/m/Y"); ?>" placeholder="Fecha">
+                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
+                                        value="<?php echo date("d/m/Y"); ?>" placeholder="Fecha">
                                 </div>
                             </div>
                         </div>
@@ -36,24 +36,27 @@
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">CONTACTO</label>
-                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4" placeholder="0665434">
+                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
+                                        placeholder="066-403240">
                                 </div>
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">REPORTE</label>
-                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4" placeholder="Quinto Reporte">
+                                    <input disabled="disabled" type="email" class="form-control" id="inputEmail4"
+                                        placeholder="Quinto Reporte">
                                 </div>
                             </div>
                         </div>
                     </div>
                     {{-- <input type="submit" class="btn btn-success" value="Guardar"> --}}
-                    
+
                 </form>
-                
+
             </div>
             <a class="btn btn-success" href="programas">CALIFICAR PROGRAMAS</a>
-            
+            <p></p>
+            <a class="btn btn-warning" href="actualizardatos">Actualizar Datos</a>
         </div>
-        
+
     </div>
 </div>
 

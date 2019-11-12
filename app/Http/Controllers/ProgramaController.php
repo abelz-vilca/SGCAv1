@@ -27,14 +27,15 @@ class ProgramaController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-public function error(){
+    public function error()
+    {
 
-    return view('error');
-}
-    
+        return view('error');
+    }
+
     public function create()
     {
-        $programas = App\Programa::all();
+        $programas = App\Programa::paginate(7);
         return view('programas', compact('programas'));
     }
     public function creates()
