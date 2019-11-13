@@ -3,7 +3,7 @@
 @section('name')
 
 
-<div aling="center" class="container-fluid container-my-4">
+<div align="center" class="container-fluid container-my-4">
     <h1>CALIFICACION DE LOS ESTANDARES</h1>
     {{-- <form>
         <div class="form-group">
@@ -23,7 +23,7 @@
         <thead class="table table-striped">
             <tr align="center" class="bg-success">
                 <th scope="col">#ID</th>
-                <th scope="col">Link</th>
+                <th scope="col">Link del documento</th>
                 <th scope="col">Calificacion</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Estandar</th>
@@ -39,7 +39,7 @@
             <tr>
                 <th scope="row">{{$iteme->id}}</th>
                 <td>{{$iteme->link}}</td>
-                <td align="center" >{{$iteme->calificacion}}</td>
+                <td align="center">{{$iteme->calificacion}}</td>
                 <td align="center">{{$iteme->fecha}}</td>
                 <td align="center">{{$iteme->estandar_id}}</td>
                 {{-- <td>{{$iteme->nombre_estandar}}</td> --}}
@@ -49,9 +49,14 @@
                 {{-- <td>{{$item->programa_id}}</td> --}}
 
                 <td align="center">
-                    <a href="{{route('programas.editar', $iteme)}}" type="button" class="btn btn-danger">Calificar</a>
+                    <a href="{{route('programas.editar', $iteme)}}" type="button" class="btn btn-danger"> <img
+                            src="{{asset('imagenes/calificar.png')}}" width="30" height="30"
+                            class="d-inline-block align-top" alt=""> Calificar</a>
                     {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
-                    <a href="{{$iteme->link}}" target="_blank" type="button" class="btn btn-warning">Verificar archivo</a>
+                    <a href="{{$iteme->link}}" target="_blank" type="button" class="btn btn-warning">
+                        <img src="{{asset('imagenes/internet.png')}}" width="30" height="30">
+
+                        Verificar </a>
                     {{-- <a href="" type="button" class="btn btn-info">VER</a> --}}
                 </td>
             </tr>

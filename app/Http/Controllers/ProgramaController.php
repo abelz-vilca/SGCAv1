@@ -35,7 +35,7 @@ class ProgramaController extends Controller
 
     public function create()
     {
-        $programas = App\Programa::paginate(7);
+        $programas = App\Programa::all();
         return view('programas', compact('programas'));
     }
     public function creates()
