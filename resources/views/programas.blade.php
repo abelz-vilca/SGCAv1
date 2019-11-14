@@ -2,55 +2,55 @@
 
 @section('name')
 
+<link rel="stylesheet" href="{{asset('tablas/css/dataTables.bootstrap4.min.css')}}">
 
-<body class="fix-header card-no-border">
-      <div class="row">
-        <div class="col-12">
-                <div class="card">
-                        <div class="card-body" style="background-color: #BDD7D6;">
-                                <table class="table table-striped table-bordered" id="editable-datatable">
-                                        <thead >
-                                            <tr align="center" class="bg-success" >
-                                                <th scope="col">#ID</th>
-                                                <th scope="col">PROGRAMAS DE ESTUDIOS</th>
-                                                <th scope="col">CUI</th>
-                                
-                                                <th scope="col">Accion</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                
-                                            @foreach ($programas as $item )
-                                            <tr class="table-info">
-                                                <th scope="row">{{$item->id}}</th>
-                                                <td>{{$item->nombre_programa}}</td>
-                                                <td>{{$item->CUI}}</td>
-                                
-                                                <td  >
-                                                    <a href="{{route('programadetalle', $item)}}" type="button" class="btn btn-info"><i
-                                                            class=" fa fa-file"> </i> CALIFICAR</a>                                                           
-                                                </td>
-                                            </tr>
-                                            @endforeach()
-                                
-                                        </tbody>
-                                
-                                    </table>
-                            </div>
-                           </div>
-                    </div>
-                </div>
-               
-                <script src="../assets/plugins/jquery/jquery.min.js"></script>
-             
-                <!-- Editable -->
-                <script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
-                <script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
-                <script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
-                <script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
-                <script>
-               
-                $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body" style="background-color: #BDD7D6;">
+                <table class="table table-striped table-bordered" id="editable-datatable">
+                    <thead>
+                        <tr align="center" class="bg-success">
+                            <th scope="col">#ID</th>
+                            <th scope="col">PROGRAMAS DE ESTUDIOS</th>
+                            <th scope="col">CUI</th>
+
+                            <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach ($programas as $item )
+                        <tr class="table-info">
+                            <th scope="row">{{$item->id}}</th>
+                            <td>{{$item->nombre_programa}}</td>
+                            <td>{{$item->CUI}}</td>
+
+                            <td>
+                                <a href="{{route('programadetalle', $item)}}" type="button" class="btn btn-info"><i
+                                        class=" fa fa-file"> </i> CALIFICAR</a>
+                            </td>
+                        </tr>
+                        @endforeach()
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
+
+<!-- Editable -->
+<script src="{{asset('assets/plugins/jquery-datatables-editable/jquery.dataTables.js')}}"></script>
+<script src="{{asset('assets/plugins/datatables/dataTables.bootstrap.js')}}"></script>
+<script src="{{asset('assets/plugins/tiny-editable/mindmup-editabletable.js')}}"></script>
+<script src="{{asset('assets/plugins/tiny-editable/numeric-input-example.js')}}"></script>
+<script>
+    $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
                 $(document).ready(function() {
                     $('#editable-datatable').DataTable({
             "language": lenguaje_espanol
@@ -87,10 +87,10 @@
                     "colvis": "Visibilidad"
                 }
 }
-                </script>
-               
-            </body>
-            
-            
-           
+</script>
+
+
+
+
+{{-- @include('modal') --}}
 @endsection

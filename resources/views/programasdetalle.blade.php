@@ -11,67 +11,69 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
+            <h4 class="fas fa-align-right">VER TABLA DE CALIFICACION</h4>
+            <a href="#" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><img
+                    src="{{asset('imagenes/ver.png')}}" width="40" height="30" class="d-inline-block align-top" alt="">
+                VER</a>
+        </div>
+        <div class="col-sm-4">
             <h4>PROGRAMA SELECCIONADO</h4>
             <p><input disabled="disabled" class="form-control" type="text" name="fecha"
                     value="{{$programas->nombre_programa}}"></p>
         </div>
-        {{-- <div class="col-sm-4">
-            <h4 class="fas fa-align-right">ID</h4>
-            <p><input class="form-control" type="text" name="fecha" value="{{$programas->id}}"></p>
-    </div> --}}
-    <div class="col-sm-4">
-        <h4>Código Unico de Identificacion</h4>
-        <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->CUI}}"></p>
+
+        <div class="col-sm-4">
+            <h4>Código Unico de Identificacion</h4>
+            <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->CUI}}"></p>
+        </div>
     </div>
-</div>
-<table class="table table-striped table-bordered" id="tabla-detalle" align="center">
-    <thead class="table table-striped">
-        <tr class="bg-success" align="center">
-            <th>#ID</th>
-            <th>Link del Archivo</th>
-            <th>Calificación</th>
-            <th>Fecha de Modificación</th>
-            <th>Estandar</th>
-            {{-- <th>P</th> --}}
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($estandarprograma as $item )
+    <table class="table table-striped table-bordered" id="tabla-detalle" align="center">
+        <thead class="table table-striped">
+            <tr class="bg-success" align="center">
+                <th>#ID</th>
+                <th>Link del Archivo</th>
+                <th>Calificación</th>
+                <th>Fecha de Modificación</th>
+                <th>Estandar</th>
+                {{-- <th>P</th> --}}
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($estandarprograma as $item )
 
-        <tr class="table-info">
-            <th scope="row">{{$item->id}}</th>
-            <td>{{$item->link}}</td>
-            <td align="center">{{$item->calificacion}}</td>
-            <td align="center">{{$item->fecha}}</td>
-            <td align="center">{{$item->estandar_id}}</td>
-            {{-- <td>{{$item->programa_id}}</td> --}}
-            <td>
+            <tr class="table-info">
+                <th scope="row">{{$item->id}}</th>
+                <td>{{$item->link}}</td>
+                <td align="center">{{$item->calificacion}}</td>
+                <td align="center">{{$item->fecha}}</td>
+                <td align="center">{{$item->estandar_id}}</td>
+                {{-- <td>{{$item->programa_id}}</td> --}}
+                <td>
 
-                <a href="{{route('programas.editar', $item)}}" type="button" class="btn btn-primary"><i
-                        class="fa fa-battery-full    "></i> Calificar  Estandar</a>
-                {{-- <a href="" class="btn btn-warning pull-right" data-toggle="modal" data-target="#create">Ver</a> --}}
-                {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
-            </td>
+                    <a href="{{route('programas.editar', $item)}}" type="button" class="btn btn-primary"><i
+                            class="fa fa-battery-full    "></i> Calificar Estandar</a>
+                    {{-- <a href="" class="btn btn-warning pull-right" data-toggle="modal" data-target="#create">Ver</a> --}}
+                    {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
+                </td>
 
 
-        </tr>
+            </tr>
 
-        @endforeach
-    </tbody>
-</table>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
-             
-                <!-- Editable -->
-                <script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
-                <script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
-                <script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
-                <script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
-                <script>
-               
-                $('#tabla-detalle').editableTableWidget().numericInputExample().find('td:first').focus();
+
+<!-- Editable -->
+<script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+<script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
+<script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
+<script>
+    $('#tabla-detalle').editableTableWidget().numericInputExample().find('td:first').focus();
                 $(document).ready(function() {
                     $('#tabla-detalle').DataTable({
             "language": lenguaje_espanol
@@ -108,6 +110,12 @@
                     "colvis": "Visibilidad"
                 }
 }
-                </script>
+</script>
 
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+</script>
+{{-- @include('modal') --}}
 @endsection

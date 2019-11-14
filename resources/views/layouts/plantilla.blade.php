@@ -18,6 +18,9 @@
     <!-- You can change the theme colors from here -->
     <link href="{{asset('css/colors/blue.css')}}" id="theme" rel="stylesheet">
 
+    {{-- tablas --}}
+
+    <link rel="stylesheet" href="{{asset('tablas/css/dataTables.bootstrap4.min.css')}}">
 </head>
 
 <body class="fix-header card-no-border">
@@ -26,7 +29,8 @@
     <!-- ============================================================== -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
     </div>
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
@@ -133,7 +137,8 @@
                     <!-- User profile image -->
                     <div class="profile-img"> <img src="{{asset('assets/images/users/profile.png')}}" alt="user" />
                         <!-- this is blinking heartbit-->
-                        <div class="notify setpos"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        <div class="notify setpos"> <span class="heartbit"></span> <span class="point"></span>
+                        </div>
                     </div>
                     <!-- User profile text-->
                     <div class="profile-text">
@@ -165,7 +170,8 @@
                                         <li><a class="icon-crop" href="{{route('reporte')}}">PROGRAMAS</a></li>
                                         <li><a class="icon-crop" href="">Dimencion</a></li>
                                         <li><a class="icon-pie-chart " href=""> Factores</a></li>
-                                        <li><a class="icon-graph" href="{{route('estandartotal')}}"> Estandares</a></li>
+                                        <li><a class="icon-graph" href="{{route('estandartotal')}}"> Estandares</a>
+                                        </li>
                                     </ul>
                                 </li>
 
@@ -269,16 +275,19 @@
     <!-- ============================================================== -->
     <script src="{{asset('assets/plugins/styleswitcher/jQuery.style.switcher.js')}}"></script>
 
-{{-- jquery-datatables-editable --}}
+    {{-- jquery-datatables-editable --}}
 
 
     <script src="{{asset('assets/plugins/jquery-datatables-editable/jquery.dataTables.js')}}"></script>
-                <script src="{{asset('assets/plugins/datatables/dataTables.bootstrap.js')}}"></script>
-                <script src="{{asset('assets/plugins/tiny-editable/mindmup-editabletable.js')}}"></script>
-                <script src="{{asset('assets/plugins/tiny-editable/numeric-input-example.js')}}"></script>
-</body>
+    <script src="{{asset('assets/plugins/datatables/dataTables.bootstrap.js')}}"></script>
+    <script src="{{asset('assets/plugins/tiny-editable/mindmup-editabletable.js')}}"></script>
+    <script src="{{asset('assets/plugins/tiny-editable/numeric-input-example.js')}}"></script>
 
+
+</body>
+@include('modal')
 
 <!-- Mirrored from themedesigner.in/demo/admin-press/main/pages-blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Sep 2019 15:17:19 GMT -->
+{{-- @include('modal') --}}
 
 </html>
