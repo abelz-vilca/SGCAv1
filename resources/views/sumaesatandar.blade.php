@@ -4,13 +4,13 @@
 <html lang="en">
 
 <body>
-    <div class="jumbotron text-center">
+    
 
-        <h1>CALIFICACION DE ESTANDARES</h1>
+        <h1 align="center">CALIFICACION DE ESTANDARES</h1>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
-                    <h4>PROGRAMA SELECCIONADO</h4>
+                <div class="col-sm-8">
+                    <h4>PROGRAMA DE ESTUDIOS</h4>
                     <p><input disabled="disabled" class="form-control" type="text" name="fecha"
                             value="{{$programas->nombre_programa}}"></p>
                 </div>
@@ -55,10 +55,10 @@
                 </div>
                 <div class="col">
                     <div class="p-3 mb-2 bg-warning text-dark" class="col-sm-10">
-                        <h4>Programa de estudios</h4>
+                        {{-- <h4>Programa de estudios</h4>
                         <p><input disabled="disabled" class="form-control" type="text" name="fecha"
-                                value="{{$programas->nombre_programa}}"></p>
-                        <h4>Calificacion total Programa:</h4>
+                                value="{{$programas->nombre_programa}}"></p> --}}
+                        <h4>Calificacion total de estandares:</h4>
                         <p><input disabled="disabled" class="form-control" type="text" name="fecha"
                                 value="{{$categorias}}"></p>
                         <h4>FACTOR 01</h4>

@@ -3,55 +3,94 @@
 @section('name')
 
 
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-{{-- <div align="center">
+<body class="fix-header card-no-border">
+      <div class="row">
+        <div class="col-12">
+                <div class="card">
+                        <div class="card-body" style="background-color: #BDD7D6;">
+                                <table class="table table-striped table-bordered" id="editable-datatable">
+                                        <thead >
+                                            <tr align="center" class="bg-success" >
+                                                <th scope="col">#ID</th>
+                                                <th scope="col">PROGRAMAS DE ESTUDIOS</th>
+                                                <th scope="col">CUI</th>
+                                
+                                                <th scope="col">Accion</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                
+                                            @foreach ($programas as $item )
+                                            <tr class="table-info">
+                                                <th scope="row">{{$item->id}}</th>
+                                                <td>{{$item->nombre_programa}}</td>
+                                                <td>{{$item->CUI}}</td>
+                                
+                                                <td  >
+                                                    <a href="{{route('programadetalle', $item)}}" type="button" class="btn btn-info"><i
+                                                            class=" fa fa-file"> </i> CALIFICAR</a>                                                           
+                                                </td>
+                                            </tr>
+                                            @endforeach()
+                                
+                                        </tbody>
+                                
+                                    </table>
+                            </div>
+                           </div>
+                    </div>
+                </div>
+               
+                <script src="../assets/plugins/jquery/jquery.min.js"></script>
+             
+                <!-- Editable -->
+                <script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+                <script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
+                <script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
+                <script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
+                <script>
+               
+                $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
+                $(document).ready(function() {
+                    $('#editable-datatable').DataTable({
+            "language": lenguaje_espanol
+                          
+        } );
+                   
+                });
 
-    <a class="btn btn-dark" href="">Selecionar el Programa de Estudios</a>
-</div> --}}
-<div class="container-my-2">
-
-    <table id="example" class="table table-striped table-bordered" style="width:100%" align="center">
-        <thead class="table table-striped">
-            <tr align="center" class="bg-success">
-                <th scope="col">#ID</th>
-                <th scope="col">PROGRAMAS DE ESTUDIOS</th>
-                <th scope="col">CUI</th>
-
-                <th scope="col">Accion</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach ($programas as $item )
-            <tr class="table-info">
-                <th scope="row">{{$item->id}}</th>
-                <td>{{$item->nombre_programa}}</td>
-                <td>{{$item->CUI}}</td>
-
-                <td>
-                    <a href="{{route('programadetalle', $item)}}" type="button" class="btn btn-info"><i
-                            class=" fa fa-file"> </i> DUCUMENTAR</a>
-
-
-                    {{-- <a href="{{route('programas', $item)}}" ype="button" class="btn btn-primary">DUCUMENTAR</a>
-                    --}}
-                </td>
-            </tr>
-            @endforeach()
-
-        </tbody>
-
-    </table>
-    {{-- {{ $programas->links() }} --}}
-    <script src=" https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src=" https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    <script>
-        $(document).ready(function() {
-        $('#example').DataTable();
-    } );
-    </script>
-</div>
-
-
+                var lenguaje_espanol = {
+    "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla =(",
+                "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                },
+                "buttons": {
+                    "copy": "Copiar",
+                    "colvis": "Visibilidad"
+                }
+}
+                </script>
+               
+            </body>
+            
+            
+           
 @endsection

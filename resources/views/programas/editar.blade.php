@@ -15,7 +15,7 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-body">
+            <div class="card-body" style="background-color: #BDD7D6;">
                 @if (session('mensaje') )
                 <div class="alert alert-success">{{ session('mensaje') }}
                 </div>
@@ -47,17 +47,16 @@
                                             {{-- <select name="calificacion" required class="form-control"> --}}
                                             <option value="<?php echo($devolverisprograma->calificacion); ?>">
                                                 Seleccione su Calificación</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">1
-                                            </option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">1</option>                                          </option>
+                                            <option  value="<?php echo($devolverisprograma->calificacion); ?>">2</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">3</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">4</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">5</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">6</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">7</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">8</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">9</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">10</option>
 
                                         </select>
                                     </div>

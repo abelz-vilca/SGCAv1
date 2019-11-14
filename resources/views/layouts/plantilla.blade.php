@@ -268,6 +268,14 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="{{asset('assets/plugins/styleswitcher/jQuery.style.switcher.js')}}"></script>
+
+{{-- jquery-datatables-editable --}}
+
+
+    <script src="{{asset('assets/plugins/jquery-datatables-editable/jquery.dataTables.js')}}"></script>
+                <script src="{{asset('assets/plugins/datatables/dataTables.bootstrap.js')}}"></script>
+                <script src="{{asset('assets/plugins/tiny-editable/mindmup-editabletable.js')}}"></script>
+                <script src="{{asset('assets/plugins/tiny-editable/numeric-input-example.js')}}"></script>
 </body>
 
 

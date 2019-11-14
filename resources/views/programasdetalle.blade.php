@@ -24,7 +24,7 @@
         <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->CUI}}"></p>
     </div>
 </div>
-<table class="table table-bordered table-info" align="center">
+<table class="table table-striped table-bordered" id="tabla-detalle" align="center">
     <thead class="table table-striped">
         <tr class="bg-success" align="center">
             <th>#ID</th>
@@ -39,7 +39,7 @@
     <tbody>
         @foreach ($estandarprograma as $item )
 
-        <tr>
+        <tr class="table-info">
             <th scope="row">{{$item->id}}</th>
             <td>{{$item->link}}</td>
             <td align="center">{{$item->calificacion}}</td>
@@ -49,8 +49,7 @@
             <td>
 
                 <a href="{{route('programas.editar', $item)}}" type="button" class="btn btn-primary"><i
-                        class="fa fa-battery-full    "></i> Calificar
-                    Estandar</a>
+                        class="fa fa-battery-full    "></i> Calificar  Estandar</a>
                 {{-- <a href="" class="btn btn-warning pull-right" data-toggle="modal" data-target="#create">Ver</a> --}}
                 {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
             </td>
@@ -62,5 +61,53 @@
     </tbody>
 </table>
 </div>
+
+<script src="../assets/plugins/jquery/jquery.min.js"></script>
+             
+                <!-- Editable -->
+                <script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+                <script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
+                <script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
+                <script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
+                <script>
+               
+                $('#tabla-detalle').editableTableWidget().numericInputExample().find('td:first').focus();
+                $(document).ready(function() {
+                    $('#tabla-detalle').DataTable({
+            "language": lenguaje_espanol
+                          
+        } );
+                   
+                });
+
+                var lenguaje_espanol = {
+    "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla =(",
+                "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                },
+                "buttons": {
+                    "copy": "Copiar",
+                    "colvis": "Visibilidad"
+                }
+}
+                </script>
 
 @endsection
