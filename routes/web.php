@@ -10,9 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//PRUEBA PARA INPUT
+route::get('/pruebainput', 'PruebaController@pruebainput')->name('pruebainput');
+
+
 Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
 Route::get('/reportetotal', 'PagesController@reporte')->name('reporte');
 route::get('/errors', 'ProgramaController@error')->name('errors');
+
+
 
 Route::get('', function () {
     return view('');
