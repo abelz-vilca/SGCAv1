@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App;
+use Carbon\Carbon;
 
 class PruebaController extends Controller
 {
@@ -16,9 +18,11 @@ class PruebaController extends Controller
     {
         //
     }
-    public function pruebainput()
+    public function subirArchivo()
     {
-        return view('PRUEBAS.formulario');
+        $pruebas = App\Prueba::all();
+
+        return view('PRUEBAS.formulario', compact('pruebas'));
     }
 
     /**
@@ -26,9 +30,30 @@ class PruebaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $notaNueva = new App\Prueba;
+        //obtenemos el campo file definido en el formulario
+        // $file = $request->file('archivo');
+
+        //obtenemos el nombre del archivo
+        // $nombre = Carbon::now()->second . $file->getClientOriginalName();
+
+        //indicamos que queremos guardar un nuevo archivo en el disco local
+        // \Storage::disk('local')->put($nombre,  \File::get($file));
+
+        // $archivo = $request->file('archivo');
+        // $nombre = time() . $archivo->getClientOriginalName();
+        // $request->file('archivo')->store('public');
+
+        // $notaNueva = new App\Prueba;
+        $notaNueva->archivo = $request->file('archivo')->store('public/hola');
+        $notaNueva->estandares_id = $request->estandares_id;
+        $notaNueva->programas_id = $request->programas_id;
+
+        $notaNueva->save();
+
+        return back()->with('mensaje', 'Nota agregada');
     }
 
     /**

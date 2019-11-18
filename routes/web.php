@@ -12,9 +12,10 @@
 */
 
 //PRUEBA PARA INPUT
-route::get('/pruebainput', 'PruebaController@pruebainput')->name('pruebainput');
+Route::get('/subir', 'PruebaController@subirArchivo')->name('subir');
+Route::post('/subirs', ['as' => 'subir.archivo', 'uses' => 'PruebaController@create']);
 
-
+//otras Rutas
 Route::get('/acreditacion', 'PagesController@inicio')->name('acreditacion');
 Route::get('/reportetotal', 'PagesController@reporte')->name('reporte');
 route::get('/errors', 'ProgramaController@error')->name('errors');
