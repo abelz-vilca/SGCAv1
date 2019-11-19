@@ -10,7 +10,7 @@
 <header>
 
     <!-- Image and text -->
-    
+
 </header>
 <div class="row">
     <div class="col-12">
@@ -27,16 +27,15 @@
                         <div class="col-sm-6">
                             <div class="form-row">
                                 <div class="form-group col-md-12">
-                                    <label for="basic-url">LINK DE SU ARCHIVO</label>
+                                    <label for="basic-url">SELECIONE EL DOCUMENTO</label>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"
-                                                id="basic-addon3">url:</span>
+                                            <input type="file" class="form-control-file" name="archivo" id="">
                                         </div>
                                         {{-- <input type="text" name="link" class="form-control" value="{{old('link')}}">
                                         --}}
-                                        <input type="text" name="link" class="form-control"
-                                            value="<?php echo($devolverisprograma->link); ?>">
+                                        {{-- <input type="text" name="link" class="form-control"
+                                            value=""> --}}
 
                                     </div>
                                 </div>
@@ -47,8 +46,9 @@
                                             {{-- <select name="calificacion" required class="form-control"> --}}
                                             <option value="<?php echo($devolverisprograma->calificacion); ?>">
                                                 Seleccione su Calificación</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">1</option>                                          </option>
-                                            <option  value="<?php echo($devolverisprograma->calificacion); ?>">2</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">1</option>
+                                            </option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">2</option>
                                             <option value="<?php echo($devolverisprograma->calificacion); ?>">3</option>
                                             <option value="<?php echo($devolverisprograma->calificacion); ?>">4</option>
                                             <option value="<?php echo($devolverisprograma->calificacion); ?>">5</option>
@@ -56,11 +56,12 @@
                                             <option value="<?php echo($devolverisprograma->calificacion); ?>">7</option>
                                             <option value="<?php echo($devolverisprograma->calificacion); ?>">8</option>
                                             <option value="<?php echo($devolverisprograma->calificacion); ?>">9</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">10</option>
+                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">10
+                                            </option>
 
                                         </select>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="form-group col-md-12">
 
@@ -99,11 +100,11 @@
     </div>
 </div>
 
-<div align="center" >
+<div align="center">
 
     {{-- {{route('estandar_programaid')}} --}}
     {{-- {{route('estandar_programaid',$devolverisprograma->programa_id)}} --}}
-    <a  align="center" class="navbar-brand" href="{{route('estandar_programaid',$devolverisprograma->programa_id)}}">
+    <a align="center" class="navbar-brand" href="{{route('estandar_programaid',$devolverisprograma->programa_id)}}">
         <img src="{{asset('imagenes/regresar.png')}}" width="50" height="50" class="d-inline-block align-top" alt="">
         REGRESAR A VERIFICAR EL DOCUMENTO Y CALIFICACION
     </a>

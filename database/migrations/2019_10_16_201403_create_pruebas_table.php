@@ -15,6 +15,7 @@ class CreatePruebasTable extends Migration
     {
         Schema::create('pruebas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('archivo');
             $table->integer('estandares_id');
             $table->integer('programas_id');
             $table->timestamps();

@@ -15,8 +15,9 @@ class CreateEstandarProgramaTable extends Migration
     {
         Schema::create('estandar_programa', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('link', 200)->nullable();
+            $table->string('archivo')->nullable();
             $table->integer('calificacion')->nullable();
+            $table->text('descripcion')->nullable();
             $table->date('fecha')->nullable();
             $table->unsignedBigInteger('estandar_id');
             $table->unsignedBigInteger('programa_id');

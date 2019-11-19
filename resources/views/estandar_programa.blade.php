@@ -23,8 +23,9 @@
         <thead class="table table-striped">
             <tr align="center" class="bg-warning">
                 <th scope="col">#ID</th>
-                <th scope="col">Link del documento</th>
+                <th scope="col">Documento</th>
                 <th scope="col">Calificacion</th>
+                <th scope="col">Descripcion</th>
                 <th scope="col">Fecha</th>
                 <th scope="col">Estandar</th>
                 {{-- <th scope="col">estandar_NAME</th> --}}
@@ -38,8 +39,9 @@
             @foreach ($devolverisprograma as $iteme )
             <tr class="table-success">
                 <th scope="row">{{$iteme->id}}</th>
-                <td>{{$iteme->link}}</td>
+                <td>{{$iteme->archivo}}</td>
                 <td align="center">{{$iteme->calificacion}}</td>
+                <td align="center">{{$iteme->descripcion}}</td>
                 <td align="center">{{$iteme->fecha}}</td>
                 <td align="center">{{$iteme->estandar_id}}</td>
                 {{-- <td>{{$iteme->nombre_estandar}}</td> --}}
@@ -73,15 +75,14 @@
     {{-- @include('modal') --}}
 </div>
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
-             
-                <!-- Editable -->
-                <script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
-                <script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
-                <script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
-                <script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
-                <script>
-               
-                $('#estandar_detalle').editableTableWidget().numericInputExample().find('td:first').focus();
+
+<!-- Editable -->
+<script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+<script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
+<script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
+<script>
+    $('#estandar_detalle').editableTableWidget().numericInputExample().find('td:first').focus();
                 $(document).ready(function() {
                     $('#estandar_detalle').DataTable({
             "language": lenguaje_espanol
@@ -118,7 +119,7 @@
                     "colvis": "Visibilidad"
                 }
 }
-                </script>
+</script>
 
 
 @endsection()

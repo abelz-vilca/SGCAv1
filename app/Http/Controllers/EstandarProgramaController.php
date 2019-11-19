@@ -43,10 +43,7 @@ class EstandarProgramaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+
 
     /**
      * Display the specified resource.
@@ -92,11 +89,17 @@ class EstandarProgramaController extends Controller
     {
 
         $request->validate([
-            'link' => 'required',
-            'calificacion' => 'required'
+            'archivo' => 'required',
+            'calificacion' => 'required',
+            'descripcion' => 'required'
         ]);
         $notaupdate = App\EstandarPrograma::findOrFail($id);
-        $notaupdate->link = $request->link;
+
+        if ($request->hasFile('archivo')) {
+            $notaupdate->archivo = $request->file('archivo')->store('public');
+        }
+
+        // $notaupdate->link = $request->link;
         $notaupdate->calificacion = $request->calificacion;
         $notaupdate->fecha = Carbon::now();
 
@@ -110,6 +113,10 @@ class EstandarProgramaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+    {
+        //
+    }
+    public function store(Request $request)
     {
         //
     }
