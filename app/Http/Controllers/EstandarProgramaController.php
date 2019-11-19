@@ -101,6 +101,7 @@ class EstandarProgramaController extends Controller
 
         // $notaupdate->link = $request->link;
         $notaupdate->calificacion = $request->calificacion;
+        $notaupdate->descripcion = $request->descripcion;
         $notaupdate->fecha = Carbon::now();
 
         $notaupdate->save();

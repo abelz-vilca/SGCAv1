@@ -44,27 +44,28 @@
                                     <div class="controls">
                                         <select name="calificacion" id="calificacion" required class="form-control">
                                             {{-- <select name="calificacion" required class="form-control"> --}}
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">
+                                            <option value="">
                                                 Seleccione su Calificación</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">1</option>
+                                            <option value="1">1</option>
                                             </option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">2</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">3</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">4</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">5</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">6</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">7</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">8</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">9</option>
-                                            <option value="<?php echo($devolverisprograma->calificacion); ?>">10
-                                            </option>
+                                            <option value="2">2</option>
+                                            <option value="3">4</option>
+                                            <option value="4">3</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
 
                                         </select>
                                     </div>
 
                                 </div>
                                 <div class="form-group col-md-12">
-
+                                    <label for="fecha">DESCRIPCION</label>
+                                    <input type="text" name="descripcion" class="form-control"
+                                        placeholder="Anote la Descripción del Estándar" />
                                 </div>
                             </div>
                         </div>
