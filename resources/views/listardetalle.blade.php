@@ -1,14 +1,15 @@
 @extends('layouts.plantilla')
 @section('name')
 <div align="center">
-    
+
     <p>LINK DE LOS ARCHIVOS DE LOS ESTANDARES</p>
 </div>
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
             <h4>PROGRAMA SELECCIONADO</h4>
-            <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->nombre_programa}}"></p>
+            <p><input disabled="disabled" class="form-control" type="text" name="fecha"
+                    value="{{$programas->nombre_programa}}"></p>
         </div>
         <div class="col-sm-4">
             <h4 class="fas fa-align-right">ID</h4>
@@ -36,7 +37,8 @@
             <tr align="center">
                 <th scope="row">{{$item->id}}</th>
                 <td>
-                    <a href="{{$item->link}}" target="_blank">ABRIR LINK DEL ESTANDAR : {{$item->id}}</a>
+                    <a href="{{Storage::url($item->archivo)}}" target="_blank">Abrir Documento del Estándar :
+                        {{$item->id}}</a>
                     {{-- <a href="{{$item->link}}" target="_blank">{{$item->link}}</a> --}}
                     {{-- <a href="{{route('linkarchivo', $item->id)}}">{{$item->link}}</a> --}}
                 </td>
@@ -45,8 +47,8 @@
                 <td>{{$item->estandar_id}}</td>
                 {{-- <td>{{$item->programa_id}}</td> --}}
                 {{-- <td> --}}
-                    {{-- <a href="" type="button" class="btn btn-primary">VER PUNTAJE</a> --}}
-                    {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
+                {{-- <a href="" type="button" class="btn btn-primary">VER PUNTAJE</a> --}}
+                {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
                 {{-- </td> --}}
             </tr>
 
@@ -57,15 +59,15 @@
 
 
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
-             
-                <!-- Editable -->
-                <script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
-                <script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
-                <script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
-                <script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
 
-                <script>
-                              $('#link_archivo').editableTableWidget().numericInputExample().find('td:first').focus();
+<!-- Editable -->
+<script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+<script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
+<script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
+
+<script>
+    $('#link_archivo').editableTableWidget().numericInputExample().find('td:first').focus();
                 $(document).ready(function() {
                     $('#link_archivo').DataTable({
             "language": lenguaje_espanol
@@ -102,5 +104,5 @@
                     "colvis": "Visibilidad"
                 }
 }
-                </script>
+</script>
 @endsection

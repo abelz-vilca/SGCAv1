@@ -90,16 +90,24 @@ class EstandarProgramaController extends Controller
 
         $request->validate([
             'archivo' => 'required',
-            'calificacion' => 'required',
-            'descripcion' => 'required'
+            'calificacion' => 'required'
+            // 'descripcion' => 'required'
         ]);
+
+        // codigo para conseguirr ruta y nomnre dle archivo subido
+        // $data = $request->input('image');
+        // $photo = $request->file('image')->getClientOriginalName();
+        // $destination = base_path() . '/public/uploads';
+        // $request->file('image')->move($destination, $photo);
+
+
         $notaupdate = App\EstandarPrograma::findOrFail($id);
 
         if ($request->hasFile('archivo')) {
-            $notaupdate->archivo = $request->file('archivo')->store('public');
+            $notaupdate->archivo = $request->file('archivo')->store('public/Estandares');
         }
 
-        // $notaupdate->link = $request->link;
+        // $notaupdate->archivo = $request->file('archivo')->store('public');
         $notaupdate->calificacion = $request->calificacion;
         $notaupdate->descripcion = $request->descripcion;
         $notaupdate->fecha = Carbon::now();
@@ -117,7 +125,7 @@ class EstandarProgramaController extends Controller
     {
         //
     }
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         //
     }

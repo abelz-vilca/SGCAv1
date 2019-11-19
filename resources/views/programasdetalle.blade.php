@@ -11,19 +11,13 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <h4 class="fas fa-align-right">VER TABLA DE CALIFICACION</h4>
-            <a href="#" class="btn btn-warning pull-right" data-toggle="modal" data-target="#myModal"><img
-                    src="{{asset('imagenes/ver.png')}}" width="40" height="30" class="d-inline-block align-top" alt="">
-                VER</a>
-        </div>
-        <div class="col-sm-4">
-            <h4>PROGRAMA SELECCIONADO</h4>
+            <h4>PROGRAMA DE ESTUDIOS</h4>
             <p><input disabled="disabled" class="form-control" type="text" name="fecha"
                     value="{{$programas->nombre_programa}}"></p>
         </div>
 
         <div class="col-sm-4">
-            <h4>Código Unico de Identificacion</h4>
+            <h4>Código Unico de Identificacion (CUI)</h4>
             <p><input disabled="disabled" class="form-control" type="text" name="fecha" value="{{$programas->CUI}}"></p>
         </div>
     </div>
@@ -31,7 +25,7 @@
         <thead class="table table-striped">
             <tr class="bg-success" align="center">
                 <th>#ID</th>
-                <th>Link del Archivo</th>
+                <th>Archivo</th>
                 <th>Calificación</th>
                 <th>Fecha de Modificación</th>
                 <th>Estandar</th>
@@ -51,7 +45,7 @@
                 {{-- <td>{{$item->programa_id}}</td> --}}
                 <td>
 
-                    <a href="{{route('programas.editar', $item)}}" type="button" class="btn btn-primary"><i
+                    <a href="{{route('estandar_programaid', $item)}}" type="button" class="btn btn-primary"><i
                             class="fa fa-battery-full    "></i> Calificar Estandar</a>
                     {{-- <a href="" class="btn btn-warning pull-right" data-toggle="modal" data-target="#create">Ver</a> --}}
                     {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
@@ -117,5 +111,5 @@
       $('#myInput').trigger('focus')
     })
 </script>
-{{-- @include('modal') --}}
+
 @endsection

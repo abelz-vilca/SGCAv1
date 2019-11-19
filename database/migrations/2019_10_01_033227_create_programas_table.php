@@ -17,9 +17,9 @@ class CreateProgramasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nombre_programa', 78);
             $table->integer('CUI');
-            $table->unsignedBigInteger('academico_id');
+
             $table->unsignedBigInteger('facultad_id');
-            $table->foreign('academico_id')->references('id')->on('academicos');
+
             $table->foreign('facultad_id')->references('id')->on('facultades');
             $table->timestamps();
         });

@@ -2,7 +2,7 @@
 @section('name')
 <div align="center" class="container-my-2">
     {{-- <a type="button" class="btn btn-success">SELECCIONAR PROGRAMA DE ESTUDIOS</a> --}}
-    <h1  align="center">SELECCIONAR PROGRAMA DE ESTUDIOS</h1>
+    <h1 align="center">SELECCIONAR PROGRAMA DE ESTUDIOS</h1>
 </div>
 <div class="container-fluid" class="container-my-4">
 
@@ -31,8 +31,10 @@
                     --}}
                     {{-- <a href="{{route('sumacalificacion', $item)}}" type="button" class="btn btn-warning">VER
                     CALIFICACION</a> --}}
-                    <a href="{{route('sumacalificacion', $item)}}" type="button" class="btn btn-info">REPORTE NUM</a>
-                    <a href="{{route('graficofactor',$item)}}" type="button" class="btn btn-secondary"> FACTORES </a>
+                    <a href="{{route('sumacalificacion', $item)}}" type="button" class="btn btn-info">REPORTE
+                        NUMÉRICO</a>
+                    <a href="{{route('graficofactor',$item)}}" type="button" class="btn btn-secondary"> REPORTE FACTORES
+                    </a>
                     <a href="{{route('graficodimension',$item)}}" type="button" class="btn btn-warning">DIMENSIONES </a>
                     <a href="{{route('graficocaed',$item)}}" type="button" class="btn btn-secondary">ED</a>
                 </td>
@@ -45,15 +47,14 @@
 </div>
 
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
-             
-                <!-- Editable -->
-                <script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
-                <script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
-                <script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
-                <script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
-                <script>
-               
-                $('#reporte').editableTableWidget().numericInputExample().find('td:first').focus();
+
+<!-- Editable -->
+<script src="../assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
+<script src="../assets/plugins/datatables/dataTables.bootstrap.js"></script>
+<script src="../assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
+<script src="../assets/plugins/tiny-editable/numeric-input-example.js"></script>
+<script>
+    $('#reporte').editableTableWidget().numericInputExample().find('td:first').focus();
                 $(document).ready(function() {
                     $('#reporte').DataTable({
             "language": lenguaje_espanol
@@ -90,5 +91,5 @@
                     "colvis": "Visibilidad"
                 }
 }
-                </script>
+</script>
 @endsection()

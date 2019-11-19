@@ -21,7 +21,7 @@
 
     <table class="table table-striped table-bordered" id="estandar_detalle" align="center">
         <thead class="table table-striped">
-            <tr align="center" class="bg-warning">
+            <tr align="center" class="bg-info">
                 <th scope="col">#ID</th>
                 <th scope="col">Documento</th>
                 <th scope="col">Calificacion</th>
@@ -37,9 +37,9 @@
 
             {{-- @foreach ($estandarprograma as $item ) --}}
             @foreach ($devolverisprograma as $iteme )
-            <tr class="table-success">
+            <tr disabled="disabled" class="table-light">
                 <th scope="row">{{$iteme->id}}</th>
-                <td>{{$iteme->archivo}}</td>
+                <td><a href="{{Storage::url($iteme->archivo)}}" target="_blank">verificar archivo</a></td>
                 <td align="center">{{$iteme->calificacion}}</td>
                 <td align="center">{{$iteme->descripcion}}</td>
                 <td align="center">{{$iteme->fecha}}</td>
@@ -50,16 +50,16 @@
                 {{--// <td>{{$iteme->programa_id}}</td> --}}
                 {{-- <td>{{$item->programa_id}}</td> --}}
 
-                <td align="center">
-                    <a href="{{route('programas.editar', $iteme)}}" type="button" class="btn btn-warning"> <img
+                <td class="" align="center">
+                    <a href="{{route('programas.editar', $iteme)}}" type="button" class="btn btn-dark"> <img
                             src="{{asset('imagenes/calificar.png')}}" width="30" height="30"
-                            class="d-inline-block align-top" alt=""> Calificar</a>
+                            class="d-inline-block align-top" alt="">Calificar</a>
                     {{-- <button type="button" class="btn btn-primary">CALIFICAR</button></td> --}}
-                    <a href="{{$iteme->link}}" target="_blank" type="button" class="btn btn-info">
-                        <img src="{{asset('imagenes/internet.png')}}" width="30" height="30">
+                    {{-- <a href="{{Storage::url($iteme->archivo)}}" target="_blank" type="button" class="btn btn-info">
+                    <img src="{{asset('imagenes/internet.png')}}" width="30" height="30">
 
-                        Verificar </a>
-                    {{-- <a href="" type="button" class="btn btn-info">VER</a> --}}
+                    Verificar </a> --}}
+
                 </td>
             </tr>
             {{-- @foreach ($devolverisprograma as $iteme )

@@ -28,7 +28,7 @@
                             <td>{{$item->CUI}}</td>
 
                             <td>
-                                <a href="{{route('programadetalle', $item)}}" type="button" class="btn btn-info"><i
+                                <a href="{{route('estandar_programaid', $item)}}" type="button" class="btn btn-info"><i
                                         class=" fa fa-file"> </i> CALIFICAR</a>
                             </td>
                         </tr>
@@ -89,8 +89,4 @@
 }
 </script>
 
-
-
-
-{{-- @include('modal') --}}
 @endsection
