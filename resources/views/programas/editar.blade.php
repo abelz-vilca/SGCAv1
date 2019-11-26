@@ -18,7 +18,7 @@
             <div align="center">
                 <a align="center" type="button" class="btn btn-dark btn-block"
                     href="{{route('estandar_programaid',$devolverisprograma->programa_id)}}">
-                    <img src="{{asset('imagenes/regresar.png')}}" width="40" height="40">
+                    <img src="{{asset('imagenes/regresar.png')}}" width="35" height="35">
                     REGRESAR A VERIFICAR EL DOCUMENTO Y CALIFICACION
                 </a>
             </div>
